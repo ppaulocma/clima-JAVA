@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Arduino</title>
+    <style>
+        body {
+            background-color: rgb(5, 3, 17);
+        }
+
+        #valor {
+            font-size: large;
+            color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button onclick="conectar()">Conectar</button>
+    <button onclick="ler()">Ler</button>
+    <button onclick="ligar()">Ligar</button>
+    <button onclick="desligar()">Desligar</button>
+    <button onclick="desconectar()">Desconectar</button>
+    
+
+    <div id="valor"></div>
+
+    <script>
+
+      
+
+ 
+        function desligar() {
+            $.get("/desligar", function (response) { });
+        }
+        
+        function ler() {
+            $.get("/ler", function (response) { });
+        }
+
+        function conectar() {
+            $.get("/conectar", function (response) { });
+        }
+
+        function ligar() {
+            $.get("/ligar", function (response) { });
+        }
+
+        function desconectar() {
+            $.get("/desconectar", function (response) { });
+        }
+
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+
+</html>
