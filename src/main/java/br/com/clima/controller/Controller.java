@@ -14,7 +14,7 @@ public class Controller {
 	
 	@GetMapping("/conectar")
 	public void conectar() {
-		arduino.setPortDescription("COM3");
+		arduino.setPortDescription("COM5");
 		arduino.openConnection();
 		arduino.startListening();
 	}
